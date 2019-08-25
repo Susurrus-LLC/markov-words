@@ -5,9 +5,10 @@
 textarea, button, div {
   display: block;
   margin: 1rem;
+  max-width: calc(100% - 2rem);
 }
 
 #input {
-  width: calc(100% - 2rem);
+  width: 100%;
   height: 8rem;
 }

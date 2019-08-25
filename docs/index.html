@@ -6,10 +6,12 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <textarea id="input"></textarea>
-    <label>minimum length: <input id="min" type="number" min=1 max=10 value=3></label>
-    <label>maximum length: <input id="max" type="number" min=4 max=12 value=8></label>
-    <label>number of words: <input id="num" type="number" min=1 max=100 value=5></label>
+    <textarea id="input" placeholder="Enter as many words as you can. The more the better."></textarea>
+    <div>
+      <label>minimum length: <input id="min" type="number" min=1 max=10 value=3></label>
+      <label>maximum length: <input id="max" type="number" min=4 max=12 value=8></label>
+      <label>number of words: <input id="num" type="number" min=1 max=100 value=5></label>
+    </div>
     <button id="generate">Generate</button>
     <div id="results">
       <p id="result"></p>

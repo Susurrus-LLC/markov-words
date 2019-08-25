@@ -5,5 +5,14 @@
   "repository": "https://github.com/nai888/markov-words.git",
   "author": "Ian A. Cook <ian@code.ianacook.com>",
   "license": "AGPL-3.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "babel src -d build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-preset-minify": "^0.5.1"
+  }
 }

@@ -1,0 +1,7 @@
+{
+  "sourceMaps": true,
+  "presets": [
+    "@babel/preset-env",
+    "minify"
+  ]
+}

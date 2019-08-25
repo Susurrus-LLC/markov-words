@@ -1,3 +1,5 @@
+'use strict'
+
 const input = document.getElementById('input')
 const minimum = document.getElementById('min')
 const maximum = document.getElementById('max')
@@ -62,7 +64,7 @@ const build = min => {
         letter = choose(next)
         word.push(letter)
         // if the word is long enough and the current letter is a terminal, end the loop
-        if (word.length > min && terminals.hasOwnProperty(letter)) {
+        if (word.length >= min && terminals.hasOwnProperty(letter)) {
           break
         }
       }

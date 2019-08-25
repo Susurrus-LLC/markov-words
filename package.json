@@ -7,7 +7,7 @@
   "license": "AGPL-3.0",
   "private": true,
   "scripts": {
-    "build": "babel src -d build"
+    "build": "babel src -d docs"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

@@ -1,0 +1,9 @@
+{
+  "name": "markov-words",
+  "version": "1.0.0",
+  "description": "Word generator based on Markov chains",
+  "repository": "https://github.com/nai888/markov-words.git",
+  "author": "Ian A. Cook <ian@code.ianacook.com>",
+  "license": "AGPL-3.0",
+  "private": true
+}

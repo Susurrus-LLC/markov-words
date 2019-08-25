@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+textarea, button, div {
+  display: block;
+  margin: 1rem;
+}
+
+#input {
+  width: calc(100% - 2rem);
+  height: 8rem;
+}

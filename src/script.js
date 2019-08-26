@@ -35,10 +35,11 @@ const build = min => {
   for (let i = 0; i < text.length; i++) {
     // grab the word and split it into an array of letters
     const word = text[i].split('')
-    // add the word-initial letter to the list of possible starters
-    starters.push(word[0])
-    // add the word-final letter to the list of possible terminals
-    terminals[word[word.length - 1]] = true
+    // add the word-initial letter pair to the list of possible starters
+    starters.push(word.slice(0, 2).join(''))
+    // add the word-final letter pair to the list of possible terminals
+    terminals[word.slice(-2).join('')] = true
+
     // build the dictionary and stats
     for (let j = 0; j < word.length - 1; j++) {
       if (dictionary.hasOwnProperty(word[j])) {
@@ -48,23 +49,45 @@ const build = min => {
         // otherwise, add the letter and its following letter
         dictionary[word[j]] = [word[j + 1]]
       }
+      // add pairs after reaching the second letter
+      if (j > 0) {
+        if (dictionary.hasOwnProperty(word[j - 1] + word[j])) {
+          // if the letter pair is already in the dual dictionary, add its following letter
+          dictionary[word[j - 1] + word[j]].push(word[j + 1])
+        } else {
+          // otherwise, add the letter and its following letter
+          dictionary[word[j - 1] + word[j]] = [word[j + 1]]
+        }
+      }
     }
   }
 
   const generate = min => {
+    const getLookup = word => {
+      if (word.length < 2) {
+        return word[word.length - 1]
+      } else {
+        return word.slice(-2).join('')
+      }
+    }
+
     // build words
     if (text.length > 0) {
-      // start with a starter letter
+      // start with starter letters
       let letter = choose(starters)
-      let word = [letter]
+      let next = letter.split('')
+      let word = next
+      let lookup = getLookup(word)
 
-      while (dictionary.hasOwnProperty(letter)) {
+      while (dictionary.hasOwnProperty(lookup)) {
         // choose the next letter and add it to the word
-        const next = dictionary[letter]
+        next = dictionary[lookup]
         letter = choose(next)
         word.push(letter)
+        lookup = getLookup(word)
+
         // if the word is long enough and the current letter is a terminal, end the loop
-        if (word.length >= min && terminals.hasOwnProperty(letter)) {
+        if (word.length >= min && terminals.hasOwnProperty(lookup)) {
           break
         }
       }

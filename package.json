@@ -2,17 +2,76 @@
   "name": "markov-words",
   "version": "1.0.0",
   "description": "Word generator based on Markov chains",
-  "repository": "https://github.com/nai888/markov-words.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nai888/markov-words"
+  },
+  "bugs": {
+    "url": "https://github.com/nai888/markov-words/issues"
+  },
   "author": "Ian A. Cook <ian@code.ianacook.com>",
   "license": "AGPL-3.0",
   "private": true,
   "scripts": {
-    "build": "babel src -d docs"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "format": "prettier-standard src/**/*.{js,jsx,ts,tsx}",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier-standard",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.2",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.0",
+    "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.1",
+    "typescript": "3.5.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-preset-minify": "^0.5.1"
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.4",
+    "prettier-standard": "^11.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "standard-with-typescript"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

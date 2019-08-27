@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c37489a57af1172130fd18949c6045dd",
+    "revision": "14395b22c53c08e4ec62b3f9605ba4c9",
     "url": "/markov-words/index.html"
   },
   {
-    "revision": "833a346d725d8c1b08ee",
+    "revision": "18b9c1b0fc4be3855531",
     "url": "/markov-words/static/css/2.d8ef342c.chunk.css"
   },
   {
-    "revision": "a408ca59e4c56532afa7",
+    "revision": "211d5fd8a16493690dbe",
     "url": "/markov-words/static/css/main.a37ef056.chunk.css"
   },
   {
-    "revision": "833a346d725d8c1b08ee",
-    "url": "/markov-words/static/js/2.a9ef668d.chunk.js"
+    "revision": "18b9c1b0fc4be3855531",
+    "url": "/markov-words/static/js/2.a463d6eb.chunk.js"
   },
   {
-    "revision": "a408ca59e4c56532afa7",
-    "url": "/markov-words/static/js/main.1af2b187.chunk.js"
+    "revision": "211d5fd8a16493690dbe",
+    "url": "/markov-words/static/js/main.5a1b85e6.chunk.js"
   },
   {
     "revision": "46f1b53c14fc30ecb56d",

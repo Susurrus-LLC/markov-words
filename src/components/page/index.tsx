@@ -31,12 +31,15 @@ const Page: React.FC = () => {
         .split(/[\n .,/#!$%@^&*;:{}=\-_`~[\]()]/)
         .filter(word => word.length > 0)
     )
+
+    // flag that the data needs to be rebuilt
     setStartersReady(false)
     setTerminalsReady(false)
     setDictionaryReady(false)
   }, [input])
 
   useEffect(() => {
+    // when the data is built, trigger generation
     if (startersReady && terminalsReady && dictionaryReady) {
       makeWords()
     }
@@ -93,6 +96,7 @@ const Page: React.FC = () => {
       setDictionary({ ...newDict })
     }
 
+    // trigger generation with useEffect
     setStartersReady(true)
     setTerminalsReady(true)
     setDictionaryReady(true)
@@ -133,8 +137,10 @@ const Page: React.FC = () => {
 
   const makeWords = () => {
     if (!startersReady || !terminalsReady || !dictionaryReady) {
+      // if the data needs to be built, build it
       build()
     } else {
+      // if the data is built, generate the output
       let results = []
 
       // if the minimum length is greater than the maximum, display an error
@@ -193,7 +199,7 @@ const Page: React.FC = () => {
             id='num'
             type='number'
             min='1'
-            max='1000'
+            max='9999'
             value={num}
             onChange={e => setNum(+e.target.value)}
           />

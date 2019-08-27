@@ -11,15 +11,16 @@ const Page: React.FC = () => {
   }
 
   const [input, setInput] = useState('')
-  const [changed, setChanged] = useState(false)
   const [min, setMin] = useState(3)
   const [max, setMax] = useState(8)
   const [num, setNum] = useState(50)
-  const [err, setErr] = useState('')
   const [text, setText] = useState([''])
   const [starters, setStarters] = useState([''])
+  const [startersReady, setStartersReady] = useState(false)
   const [terminals, setTerminals] = useState<Terminals>({})
+  const [terminalsReady, setTerminalsReady] = useState(false)
   const [dictionary, setDictionary] = useState<Dictionary>({})
+  const [dictionaryReady, setDictionaryReady] = useState(false)
   const [output, setOutput] = useState('')
 
   useEffect(() => {
@@ -30,134 +31,127 @@ const Page: React.FC = () => {
         .split(/[\n .,/#!$%@^&*;:{}=\-_`~[\]()]/)
         .filter(word => word.length > 0)
     )
+    setStartersReady(false)
+    setTerminalsReady(false)
+    setDictionaryReady(false)
   }, [input])
+
+  useEffect(() => {
+    if (startersReady && terminalsReady && dictionaryReady) {
+      makeWords()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [startersReady, terminalsReady, dictionaryReady])
 
   // make a random choice, given options
   const choose = (arr: string[]) => arr[Math.floor(arr.length * Math.random())]
 
-  const build = (min: number) => {
-    // if the minimum length is greater than the maximum, display an error
-    if (min > max) {
-      setErr('Maximum length must be greater or equal to minimum length.')
-      return false
-    } else {
-      setErr('')
-    }
-
+  const build = () => {
     // if the input has changed,
-    if (changed) {
+    if (!startersReady || !terminalsReady || !dictionaryReady) {
+      let newStart = [...starters].filter(entry => entry.length > 0)
+      let newTerm = { ...terminals }
+      let newDict = { ...dictionary }
+
       // build the dictionary, terminals, and starters
       for (let i = 0; i < text.length; i++) {
         // grab the word and split it into an array of letters
         const word = text[i].split('')
+
         // add the word-initial letter pair to the list of possible starters
-        setStarters(starters.concat(word.slice(0, 2).join('')))
+        newStart.push(word.slice(0, 2).join(''))
+
         // add the word-final letter pair to the list of possible terminals
-        setTerminals({
-          ...terminals,
-          [word.slice(-2).join('')]: true
-        })
+        newTerm[word.slice(-2).join('')] = true
 
         // build the dictionary and stats
         for (let j = 0; j < word.length - 1; j++) {
           // add lookups for single letters
-          if (dictionary.hasOwnProperty(word[j])) {
+          if (newDict.hasOwnProperty(word[j])) {
             // if the letter is already in the dictionary, add its following letter
-            setDictionary({
-              ...dictionary,
-              [word[j]]: dictionary[word[j]].concat([word[j + 1]])
-            })
+            newDict[word[j]].push(word[j + 1])
           } else {
             // otherwise, add the letter and its following letter
-            setDictionary({
-              ...dictionary,
-              [word[j]]: [word[j + 1]]
-            })
+            newDict[word[j]] = [word[j + 1]]
           }
 
           // add lookups for paired letters after reaching the second letter
           if (j > 0) {
-            if (dictionary.hasOwnProperty(word[j - 1] + word[j])) {
+            if (newDict.hasOwnProperty(word[j - 1] + word[j])) {
               // if the letter pair is already in the dictionary, add its following letter
-              setDictionary({
-                ...dictionary,
-                [word[j - 1] + word[j]]: dictionary[
-                  word[j - 1] + word[j]
-                ].concat([word[j + 1]])
-              })
+              newDict[word[j - 1] + word[j]].push(word[j + 1])
             } else {
               // otherwise, add the letter pair and its following letter
-              setDictionary({
-                ...dictionary,
-                [word[j - 1] + word[j]]: [word[j + 1]]
-              })
+              newDict[word[j - 1] + word[j]] = [word[j + 1]]
             }
           }
         }
       }
+
+      setStarters([...newStart])
+      setTerminals({ ...newTerm })
+      setDictionary({ ...newDict })
     }
 
-    const generate = (min: number): string | false => {
-      // grab the last letter(s) of the word for lookup
-      const getLookup = (word: string[]) => {
-        return word.length < 2 ? word[word.length - 1] : word.slice(-2).join('')
-      }
+    setStartersReady(true)
+    setTerminalsReady(true)
+    setDictionaryReady(true)
+  }
 
-      // build words
-      if (text.length > 0) {
-        // start with starter letters
-        let letter = choose(starters)
-        let next = letter.split('')
-        let word = next
-        let lookup = getLookup(word)
+  const generate = (min: number): string => {
+    // grab the last letter(s) of the word for lookup
+    const getLookup = (word: string[]) => {
+      return word.length < 2 ? word[word.length - 1] : word.slice(-2).join('')
+    }
 
-        while (dictionary.hasOwnProperty(lookup)) {
-          // choose the next letter and add it to the word
-          next = dictionary[lookup]
-          letter = choose(next)
-          word.push(letter)
-          lookup = getLookup(word)
+    // start with starter letters
+    let letter = choose(starters)
+    let next = letter.split('')
+    let word = next
+    let lookup = getLookup(word)
 
-          // if the word is long enough and the current letter is a terminal, end the loop
-          if (word.length >= min && terminals.hasOwnProperty(lookup)) {
-            break
-          }
-        }
+    while (dictionary.hasOwnProperty(lookup)) {
+      // choose the next letter and add it to the word
+      next = dictionary[lookup]
+      letter = choose(next)
+      word.push(letter)
+      lookup = getLookup(word)
 
-        // if the word isn't long enough, try again
-        if (word.length < min) {
-          return generate(min)
-        } else {
-          return word.join('')
-        }
-      } else {
-        setErr('No input provided.')
-        return false
+      // if the word is long enough and the current letter is a terminal, end the loop
+      if (word.length >= min && terminals.hasOwnProperty(lookup)) {
+        break
       }
     }
 
-    return generate(min)
+    // if the word isn't long enough, try again
+    if (word.length < min) {
+      return generate(min)
+    } else {
+      return word.join('')
+    }
   }
 
   const makeWords = () => {
-    let results = []
-    let errored = false
-
-    // randomize the length of the words between the min and the max
-    for (let i = 0; i < num; i++) {
-      const length = min + Math.floor((max + 1 - min) * Math.random())
-      results.push(build(length))
-    }
-
-    // if the results array includes a falsy value, it errored
-    for (let i = 0; i < results.length; i++) {
-      errored = !results[i]
-      break
-    }
-
-    if (errored) {
-      setOutput(err)
+    if (!startersReady || !terminalsReady || !dictionaryReady) {
+      build()
     } else {
+      let results = []
+
+      // if the minimum length is greater than the maximum, display an error
+      if (min > max) {
+        results.push('Maximum length must be greater or equal to minimum length.')
+      } else if (text.length === 0) {
+        results.push('No input provided.')
+      } else if (starters.length === 0 || starters[0] === '') {
+        results.push('Internal error.')
+      } else {
+        // randomize the length of the words between the min and the max
+        for (let i = 0; i < num; i++) {
+          const length = min + Math.floor((max + 1 - min) * Math.random())
+          results.push(generate(length))
+        }
+      }
+
       setOutput(results.join(' '))
     }
   }
@@ -168,10 +162,7 @@ const Page: React.FC = () => {
         className={styles.text}
         placeholder='Enter as many words as you can. The more the better.'
         value={input}
-        onChange={e => {
-          setInput(e.target.value)
-          setChanged(true)
-        }}
+        onChange={e => setInput(e.target.value)}
       />
       <div>
         <label>
@@ -181,7 +172,6 @@ const Page: React.FC = () => {
             type='number'
             min='1'
             max='10'
-            defaultValue={min.toString()}
             value={min}
             onChange={e => setMin(+e.target.value)}
           />
@@ -193,7 +183,6 @@ const Page: React.FC = () => {
             type='number'
             min='3'
             max='20'
-            defaultValue={max.toString()}
             value={max}
             onChange={e => setMax(+e.target.value)}
           />
@@ -205,7 +194,6 @@ const Page: React.FC = () => {
             type='number'
             min='1'
             max='1000'
-            defaultValue={num.toString()}
             value={num}
             onChange={e => setNum(+e.target.value)}
           />
@@ -213,10 +201,7 @@ const Page: React.FC = () => {
       </div>
       <button
         id='generate'
-        onClick={() => {
-          makeWords()
-          setChanged(false)
-        }}
+        onClick={makeWords}
       >
         Generate
       </button>

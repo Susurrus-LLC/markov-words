@@ -2,6 +2,7 @@
   "name": "markov-words",
   "version": "1.0.0",
   "description": "Word generator based on Markov chains",
+  "homepage": "https://nai888.github.io/markov-words/",
   "repository": {
     "type": "git",
     "url": "https://github.com/nai888/markov-words"
@@ -15,6 +16,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "yarn deploy",
+    "deploy": "gh-pages -d build",
     "format": "prettier-standard src/**/*.{js,jsx,ts,tsx}",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -49,6 +52,7 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^2.1.1",
     "husky": "^3.0.4",
     "lint-staged": "^9.2.4",
     "prettier-standard": "^11.0.0"

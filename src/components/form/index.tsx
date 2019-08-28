@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import Results from '../results'
+
 import styles from './form.module.sass'
 
 const Form: React.FC = () => {
@@ -221,9 +223,7 @@ const Form: React.FC = () => {
       >
         Generate
       </button>
-      <div className={styles.results}>
-        <p className={styles.result}>{output}</p>
-      </div>
+      <Results results={output} />
     </main>
   )
 }

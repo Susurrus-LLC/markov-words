@@ -2,8 +2,6 @@ import React from 'react'
 import 'normalize.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
-import './App.module.sass'
-
 import Page from './components/page'
 
 const App: React.FC = () => {

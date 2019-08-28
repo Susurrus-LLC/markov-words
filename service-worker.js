@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/markov-words/precache-manifest.069c28abb89e76994685d316aeb36ca3.js"
+  "/markov-words/precache-manifest.04e84ddb15d1cb32458fccce0360858c.js"
 );
 
 self.addEventListener('message', (event) => {

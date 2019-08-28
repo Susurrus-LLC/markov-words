@@ -12,8 +12,8 @@ const Page: React.FC = () => {
 
   const [input, setInput] = useState('')
   const [min, setMin] = useState(3)
-  const [max, setMax] = useState(8)
-  const [num, setNum] = useState(50)
+  const [max, setMax] = useState(10)
+  const [num, setNum] = useState(100)
   const [text, setText] = useState<string[]>([])
   const [starters, setStarters] = useState<string[]>([])
   const [startersReady, setStartersReady] = useState(false)
@@ -164,6 +164,7 @@ const Page: React.FC = () => {
   return (
     <main className={styles.main}>
       <textarea
+        name='text input'
         className={styles.text}
         placeholder='Enter as many words as you can. The more the better.'
         value={input}
@@ -174,6 +175,7 @@ const Page: React.FC = () => {
           minimum length:{' '}
           <input
             id='min'
+            name='minimum length'
             type='number'
             min='1'
             max='10'
@@ -185,6 +187,7 @@ const Page: React.FC = () => {
           maximum length:{' '}
           <input
             id='max'
+            name='maximum length'
             type='number'
             min='3'
             max='20'
@@ -196,6 +199,7 @@ const Page: React.FC = () => {
           number of words:{' '}
           <input
             id='num'
+            name='number of words'
             type='number'
             min='1'
             max='9999'
@@ -206,6 +210,7 @@ const Page: React.FC = () => {
       </div>
       <button
         id='generate'
+        name='generate'
         onClick={makeWords}
       >
         Generate

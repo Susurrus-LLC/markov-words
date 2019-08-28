@@ -14,8 +14,8 @@ const Page: React.FC = () => {
   const [min, setMin] = useState(3)
   const [max, setMax] = useState(8)
   const [num, setNum] = useState(50)
-  const [text, setText] = useState([''])
-  const [starters, setStarters] = useState([''])
+  const [text, setText] = useState<string[]>([])
+  const [starters, setStarters] = useState<string[]>([])
   const [startersReady, setStartersReady] = useState(false)
   const [terminals, setTerminals] = useState<Terminals>({})
   const [terminalsReady, setTerminalsReady] = useState(false)
@@ -24,12 +24,11 @@ const Page: React.FC = () => {
   const [output, setOutput] = useState('')
 
   useEffect(() => {
-    // split the input based on any punctuation, line breaks, or spaces
     setText(
       input
-        .toLowerCase()
-        .split(/[\n .,/#!$%@^&*;:{}=\-_`~[\]()]/)
-        .filter(word => word.length > 0)
+        .toLowerCase() // make everything lowercase
+        .split(/[\n ."“”‘’,/#!$#%@^&*;:{}–—=_`~[\]()0-9]/) // split the input based on any punctuation (except ' and -), line breaks, spaces, or numbers
+        .filter(word => word.length > 0) // strip out any empty 'words'
     )
 
     // flag that the data needs to be rebuilt
@@ -49,7 +48,7 @@ const Page: React.FC = () => {
   // make a random choice, given options
   const choose = (arr: string[]) => arr[Math.floor(arr.length * Math.random())]
 
-  const build = () => {
+  const build = (): void => {
     // if the input has changed,
     if (!startersReady || !terminalsReady || !dictionaryReady) {
       let newStart = [...starters].filter(entry => entry.length > 0)
@@ -135,7 +134,7 @@ const Page: React.FC = () => {
     }
   }
 
-  const makeWords = () => {
+  const makeWords = (): void => {
     if (!startersReady || !terminalsReady || !dictionaryReady) {
       // if the data needs to be built, build it
       build()

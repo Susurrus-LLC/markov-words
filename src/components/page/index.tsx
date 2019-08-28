@@ -164,17 +164,19 @@ const Page: React.FC = () => {
   return (
     <main className={styles.main}>
       <textarea
-        name='text input'
+        id={styles.textInput}
         className={styles.text}
+        name='text input'
         placeholder='Enter as many words as you can. The more the better.'
         value={input}
         onChange={e => setInput(e.target.value)}
       />
-      <div>
+      <div id={styles.options} className={styles.options}>
         <label>
           minimum length:{' '}
           <input
-            id='min'
+            id={styles.min}
+            className={styles.num}
             name='minimum length'
             type='number'
             min='1'
@@ -186,7 +188,8 @@ const Page: React.FC = () => {
         <label>
           maximum length:{' '}
           <input
-            id='max'
+            id={styles.max}
+            className={styles.num}
             name='maximum length'
             type='number'
             min='3'
@@ -198,7 +201,8 @@ const Page: React.FC = () => {
         <label>
           number of words:{' '}
           <input
-            id='num'
+            id={styles.num}
+            className={styles.num}
             name='number of words'
             type='number'
             min='1'
@@ -209,14 +213,15 @@ const Page: React.FC = () => {
         </label>
       </div>
       <button
-        id='generate'
+        id={styles.generate}
+        className={styles.generate}
         name='generate'
         onClick={makeWords}
       >
         Generate
       </button>
-      <div className='results'>
-        <p className='result'>{output}</p>
+      <div className={styles.results}>
+        <p className={styles.result}>{output}</p>
       </div>
     </main>
   )

@@ -1,8 +1,26 @@
-textarea, button, div
+.text, .options, .generate, .results
   display: block
   margin: 1rem
-  max-width: calc(100% - 2rem)
+
+.text, .options, .results
+  width: 100%
 
 .text
-  width: 100%
   height: 8rem
+  max-width: calc(100% - 2rem - 6px)
+
+.options, .generate, .results
+  max-width: calc(100% - 2rem)
+
+.options label
+  margin-left: 1rem
+  margin-right: 1rem
+
+  &:first-child
+    margin-left: 0
+
+  &:last-child
+    margin-right: 0
+
+.num
+  width: 3rem

@@ -30,7 +30,7 @@ const Form: React.FC = () => {
     setText(
       input
         .toLowerCase() // make everything lowercase
-        .split(/[\n ."“”‘’,/#!$#%@^&*;:{}–—=_`~[\]()0-9]/) // split the input based on any punctuation (except ' and -), line breaks, spaces, or numbers
+        .split(/[\n ."“”‘’,/#!?$#%@^&*;:{}–—=_`~[\]()0-9]/) // split the input based on any punctuation (except ' and -), line breaks, spaces, or numbers
         .filter(word => word.length > 0) // strip out any empty 'words'
     )
 

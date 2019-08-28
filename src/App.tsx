@@ -3,14 +3,14 @@ import 'normalize.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 import Header from './components/page-header'
-import Page from './components/page'
+import Form from './components/form'
 import Footer from './components/page-footer'
 
 const App: React.FC = () => {
   return (
     <>
       <Header />
-      <Page />
+      <Form />
       <Footer />
     </>
   )

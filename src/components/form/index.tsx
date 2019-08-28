@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-import styles from './page.module.sass'
+import styles from './form.module.sass'
 
-const Page: React.FC = () => {
+const Form: React.FC = () => {
   interface Terminals {
     [propName: string]: boolean
   }
@@ -228,4 +228,4 @@ const Page: React.FC = () => {
   )
 }
 
-export default Page
+export default Form

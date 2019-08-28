@@ -1,0 +1,31 @@
+@import ./functions
+
+$font: "Noto Sans", 'Fira Sans', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+/*
+ * Modular Scale
+ * https://alistapart.com/article/more-meaningful-typography
+ * 1.00rem @ 1:1.5
+ * 1.25rem @ 1:1.5
+ * https://www.modularscale.com/?1,1.25&em&1.5
+ */
+
+// All sizes are given as pure numbers, so must be given the unit 'rem'
+
+$ratio: 3.0 / 2.0
+$base1: 1.00rem
+$base2: 1.25rem
+$lnht: $base2
+
+$modularscale: ("base": $base1 $base2, "ratio": $ratio)
+
+// Colors
+
+$dark-pmy: #19535F
+$light-pmy: #0B7A75
+
+$main: harmonious-mix($light-pmy, $dark-pmy)
+$blue: harmonious-mix($dark-pmy, $light-pmy)
+
+$main-ntl: mix-neutral($main)
+$blue-ntl: mix-neutral($blue)

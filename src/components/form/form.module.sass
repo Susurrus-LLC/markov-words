@@ -1,15 +1,24 @@
+@import '~modularscale-sass/stylesheets/modularscale'
+
+@import '../../styles/variables'
+
+.form
+  padding: ms(0) 0
+
 .text, .options, .generate, .results
   display: block
-  margin: 1rem 0
+  margin: ms(0) 0
 
 .text, .options, .results
   width: 100%
 
 .text
-  height: 8rem
+  height: ms(10)
+  overflow: hidden
+  resize: vertical
 
 .options label
-  margin: 0 1rem
+  margin: 0 ms(0)
 
   &:first-child
     margin-left: 0
@@ -18,4 +27,4 @@
     margin-right: 0
 
 .num
-  width: 3rem
+  width: ms(6)

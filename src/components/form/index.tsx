@@ -166,63 +166,65 @@ const Form: React.FC = () => {
 
   return (
     <main className={styles.main}>
-      <textarea
-        id={styles.textInput}
-        className={styles.text}
-        name='text input'
-        placeholder='Enter as many words as you can. The more the better.'
-        value={input}
-        onChange={e => setInput(e.target.value)}
-      />
-      <div id={styles.options} className={styles.options}>
-        <label>
-          minimum length:{' '}
-          <input
-            id={styles.min}
-            className={styles.num}
-            name='minimum length'
-            type='number'
-            min='1'
-            max='10'
-            value={min}
-            onChange={e => setMin(+e.target.value)}
-          />
-        </label>
-        <label>
-          maximum length:{' '}
-          <input
-            id={styles.max}
-            className={styles.num}
-            name='maximum length'
-            type='number'
-            min='3'
-            max='20'
-            value={max}
-            onChange={e => setMax(+e.target.value)}
-          />
-        </label>
-        <label>
-          number of words:{' '}
-          <input
-            id={styles.num}
-            className={styles.num}
-            name='number of words'
-            type='number'
-            min='1'
-            max='9999'
-            value={num}
-            onChange={e => setNum(+e.target.value)}
-          />
-        </label>
-      </div>
-      <button
-        id={styles.generate}
-        className={styles.generate}
-        name='generate'
-        onClick={makeWords}
-      >
-        Generate
-      </button>
+      <form className={styles.form}>
+        <textarea
+          id={styles.text}
+          className={styles.text}
+          name='text input'
+          placeholder='Enter as many words as you can. The more the better.'
+          value={input}
+          onChange={e => setInput(e.target.value)}
+        />
+        <div id={styles.options} className={styles.options}>
+          <label>
+            minimum length:{' '}
+            <input
+              id={styles.min}
+              className={styles.num}
+              name='minimum length'
+              type='number'
+              min='1'
+              max='10'
+              value={min}
+              onChange={e => setMin(+e.target.value)}
+            />
+          </label>
+          <label>
+            maximum length:{' '}
+            <input
+              id={styles.max}
+              className={styles.num}
+              name='maximum length'
+              type='number'
+              min='3'
+              max='20'
+              value={max}
+              onChange={e => setMax(+e.target.value)}
+            />
+          </label>
+          <label>
+            number of words:{' '}
+            <input
+              id={styles.num}
+              className={styles.num}
+              name='number of words'
+              type='number'
+              min='1'
+              max='9999'
+              value={num}
+              onChange={e => setNum(+e.target.value)}
+            />
+          </label>
+        </div>
+        <button
+          id={styles.generate}
+          className={styles.generate}
+          name='generate'
+          onClick={makeWords}
+        >
+          Generate
+        </button>
+      </form>
       <Results results={output} />
     </main>
   )

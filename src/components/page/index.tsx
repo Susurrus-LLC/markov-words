@@ -51,9 +51,9 @@ const Page: React.FC = () => {
   const build = (): void => {
     // if the input has changed,
     if (!startersReady || !terminalsReady || !dictionaryReady) {
-      let newStart = [...starters].filter(entry => entry.length > 0)
-      let newTerm = { ...terminals }
-      let newDict = { ...dictionary }
+      let newStart: string[] = []
+      let newTerm: Terminals = {}
+      let newDict: Dictionary = {}
 
       // build the dictionary, terminals, and starters
       for (let i = 0; i < text.length; i++) {

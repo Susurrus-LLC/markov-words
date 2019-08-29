@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/markov-words/static/css/main.38f0155c.chunk.css",
-    "main.js": "/markov-words/static/js/main.68d4801d.chunk.js",
-    "main.js.map": "/markov-words/static/js/main.68d4801d.chunk.js.map",
+    "main.css": "/markov-words/static/css/main.30218d86.chunk.css",
+    "main.js": "/markov-words/static/js/main.ac8c1e62.chunk.js",
+    "main.js.map": "/markov-words/static/js/main.ac8c1e62.chunk.js.map",
     "runtime~main.js": "/markov-words/static/js/runtime~main.c01cd086.js",
     "runtime~main.js.map": "/markov-words/static/js/runtime~main.c01cd086.js.map",
     "static/css/2.b6e9bdc1.chunk.css": "/markov-words/static/css/2.b6e9bdc1.chunk.css",
-    "static/js/2.3f2bb945.chunk.js": "/markov-words/static/js/2.3f2bb945.chunk.js",
-    "static/js/2.3f2bb945.chunk.js.map": "/markov-words/static/js/2.3f2bb945.chunk.js.map",
+    "static/js/2.264658d8.chunk.js": "/markov-words/static/js/2.264658d8.chunk.js",
+    "static/js/2.264658d8.chunk.js.map": "/markov-words/static/js/2.264658d8.chunk.js.map",
     "index.html": "/markov-words/index.html",
-    "precache-manifest.fc3cb357a9d5ab3c44b392c8c774f995.js": "/markov-words/precache-manifest.fc3cb357a9d5ab3c44b392c8c774f995.js",
+    "precache-manifest.ca51411535c13e59e9e8ff6aa8a8a85b.js": "/markov-words/precache-manifest.ca51411535c13e59e9e8ff6aa8a8a85b.js",
     "service-worker.js": "/markov-words/service-worker.js",
     "static/css/2.b6e9bdc1.chunk.css.map": "/markov-words/static/css/2.b6e9bdc1.chunk.css.map",
-    "static/css/main.38f0155c.chunk.css.map": "/markov-words/static/css/main.38f0155c.chunk.css.map",
+    "static/css/main.30218d86.chunk.css.map": "/markov-words/static/css/main.30218d86.chunk.css.map",
     "static/media/global.sass": "/markov-words/static/media/fa-solid-900.d6d8d5da.woff2"
   }
 }

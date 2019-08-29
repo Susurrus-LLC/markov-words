@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
+import samples from '../../data/sampleTexts.json'
 import Results from '../results'
 
 import styles from './form.module.sass'
@@ -11,6 +12,11 @@ const Form: React.FC = () => {
 
   interface Dictionary {
     [propName: string]: string[]
+  }
+
+  interface SampleTexts {
+    name: string,
+    text: string
   }
 
   const [input, setInput] = useState('')
@@ -25,6 +31,7 @@ const Form: React.FC = () => {
   const [dictionary, setDictionary] = useState<Dictionary>({})
   const [dictionaryReady, setDictionaryReady] = useState(false)
   const [output, setOutput] = useState('')
+  const [sample, setSample] = useState<SampleTexts>(samples[0])
 
   useEffect(() => {
     setText(
@@ -47,6 +54,10 @@ const Form: React.FC = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [startersReady, terminalsReady, dictionaryReady])
+
+  useEffect(() => {
+    setInput(sample.text)
+  }, [sample])
 
   // make a random choice, given options
   const choose = (arr: string[]) => arr[Math.floor(arr.length * Math.random())]
@@ -164,6 +175,10 @@ const Form: React.FC = () => {
     }
   }
 
+  const options = samples.map((text, i) => (
+    <option key={i}>{text.name}</option>
+  ))
+
   return (
     <main className={styles.main}>
       <form className={styles.form}>
@@ -214,6 +229,18 @@ const Form: React.FC = () => {
               value={num}
               onChange={e => setNum(+e.target.value)}
             />
+          </label>
+          <label>
+            sample text:{' '}
+            <select
+              id={styles.select}
+              className={styles.select}
+              name='sample text'
+              value={sample.name}
+              onChange={e => setSample(samples[samples.findIndex(text => text.name === e.target.value)])}
+            >
+              {options}
+            </select>
           </label>
         </div>
         <button

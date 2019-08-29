@@ -220,7 +220,10 @@ const Form: React.FC = () => {
           id={styles.generate}
           className={styles.generate}
           name='generate'
-          onClick={makeWords}
+          onClick={e => {
+            e.preventDefault()
+            makeWords()
+          }}
         >
           Generate
         </button>

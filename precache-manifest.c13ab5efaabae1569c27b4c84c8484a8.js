@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "671af1cd400db42bc60d0a796d64992b",
+    "revision": "95e0da0d170ae801ab2d94f565aa8f1a",
     "url": "/markov-words/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/markov-words/static/css/2.b6e9bdc1.chunk.css"
   },
   {
-    "revision": "a1fac553cd8c02fabfd3",
-    "url": "/markov-words/static/css/main.30218d86.chunk.css"
+    "revision": "fd7d15e613c4396944e6",
+    "url": "/markov-words/static/css/main.dfad7d4c.chunk.css"
   },
   {
     "revision": "938049c3dce868a67413",
     "url": "/markov-words/static/js/2.264658d8.chunk.js"
   },
   {
-    "revision": "a1fac553cd8c02fabfd3",
-    "url": "/markov-words/static/js/main.ac8c1e62.chunk.js"
+    "revision": "fd7d15e613c4396944e6",
+    "url": "/markov-words/static/js/main.9d142b5f.chunk.js"
   },
   {
     "revision": "46f1b53c14fc30ecb56d",

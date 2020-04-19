@@ -34,29 +34,29 @@
     ]
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.0",
-    "@types/jest": "24.9.0",
-    "@types/node": "13.1.8",
-    "@types/react": "16.9.17",
-    "@types/react-dom": "16.9.4",
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@types/jest": "25.2.1",
+    "@types/node": "13.13.0",
+    "@types/react": "16.9.34",
+    "@types/react-dom": "16.9.6",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0",
-    "typescript": "3.7.5"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "typescript": "3.8.3"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.17.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-node": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.2.0",
-    "husky": "^4.0.10",
-    "lint-staged": "^10.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.6",
     "modularscale-sass": "^3.0.10",
-    "prettier-standard": "^16.1.0"
+    "prettier-standard": "^16.2.1"
   },
   "eslintConfig": {
     "extends": [

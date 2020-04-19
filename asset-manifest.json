@@ -1,18 +1,26 @@
 {
   "files": {
-    "main.css": "/markov-words/static/css/main.dfad7d4c.chunk.css",
-    "main.js": "/markov-words/static/js/main.9d142b5f.chunk.js",
-    "main.js.map": "/markov-words/static/js/main.9d142b5f.chunk.js.map",
-    "runtime~main.js": "/markov-words/static/js/runtime~main.c01cd086.js",
-    "runtime~main.js.map": "/markov-words/static/js/runtime~main.c01cd086.js.map",
-    "static/css/2.b6e9bdc1.chunk.css": "/markov-words/static/css/2.b6e9bdc1.chunk.css",
-    "static/js/2.264658d8.chunk.js": "/markov-words/static/js/2.264658d8.chunk.js",
-    "static/js/2.264658d8.chunk.js.map": "/markov-words/static/js/2.264658d8.chunk.js.map",
+    "main.css": "/markov-words/static/css/main.7444c9a1.chunk.css",
+    "main.js": "/markov-words/static/js/main.56ddd06b.chunk.js",
+    "main.js.map": "/markov-words/static/js/main.56ddd06b.chunk.js.map",
+    "runtime-main.js": "/markov-words/static/js/runtime-main.771b8254.js",
+    "runtime-main.js.map": "/markov-words/static/js/runtime-main.771b8254.js.map",
+    "static/css/2.5944899b.chunk.css": "/markov-words/static/css/2.5944899b.chunk.css",
+    "static/js/2.e114928a.chunk.js": "/markov-words/static/js/2.e114928a.chunk.js",
+    "static/js/2.e114928a.chunk.js.map": "/markov-words/static/js/2.e114928a.chunk.js.map",
     "index.html": "/markov-words/index.html",
-    "precache-manifest.c13ab5efaabae1569c27b4c84c8484a8.js": "/markov-words/precache-manifest.c13ab5efaabae1569c27b4c84c8484a8.js",
+    "precache-manifest.c9a1b2f206a40d0ddd27a3e2eb43b82a.js": "/markov-words/precache-manifest.c9a1b2f206a40d0ddd27a3e2eb43b82a.js",
     "service-worker.js": "/markov-words/service-worker.js",
-    "static/css/2.b6e9bdc1.chunk.css.map": "/markov-words/static/css/2.b6e9bdc1.chunk.css.map",
-    "static/css/main.dfad7d4c.chunk.css.map": "/markov-words/static/css/main.dfad7d4c.chunk.css.map",
-    "static/media/global.sass": "/markov-words/static/media/fa-solid-900.d6d8d5da.woff2"
-  }
+    "static/css/2.5944899b.chunk.css.map": "/markov-words/static/css/2.5944899b.chunk.css.map",
+    "static/css/main.7444c9a1.chunk.css.map": "/markov-words/static/css/main.7444c9a1.chunk.css.map",
+    "static/js/2.e114928a.chunk.js.LICENSE.txt": "/markov-words/static/js/2.e114928a.chunk.js.LICENSE.txt",
+    "static/media/global.sass": "/markov-words/static/media/fa-solid-900.ec763292.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.771b8254.js",
+    "static/css/2.5944899b.chunk.css",
+    "static/js/2.e114928a.chunk.js",
+    "static/css/main.7444c9a1.chunk.css",
+    "static/js/main.56ddd06b.chunk.js"
+  ]
 }

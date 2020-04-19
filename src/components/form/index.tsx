@@ -15,7 +15,7 @@ const Form: React.FC = () => {
   }
 
   interface SampleTexts {
-    name: string,
+    name: string
     text: string
   }
 
@@ -158,7 +158,9 @@ const Form: React.FC = () => {
 
       // if the minimum length is greater than the maximum, display an error
       if (min > max) {
-        results.push('Maximum length must be greater or equal to minimum length.')
+        results.push(
+          'Maximum length must be greater or equal to minimum length.'
+        )
       } else if (text.length === 0) {
         results.push('No input provided.')
       } else if (starters.length === 0 || starters[0] === '') {
@@ -175,9 +177,7 @@ const Form: React.FC = () => {
     }
   }
 
-  const options = samples.map((text, i) => (
-    <option key={i}>{text.name}</option>
-  ))
+  const options = samples.map((text, i) => <option key={i}>{text.name}</option>)
 
   return (
     <main className={styles.main}>
@@ -237,7 +237,13 @@ const Form: React.FC = () => {
               className={styles.select}
               name='sample text'
               value={sample.name}
-              onChange={e => setSample(samples[samples.findIndex(text => text.name === e.target.value)])}
+              onChange={e =>
+                setSample(
+                  samples[
+                    samples.findIndex(text => text.name === e.target.value)
+                  ]
+                )
+              }
             >
               {options}
             </select>

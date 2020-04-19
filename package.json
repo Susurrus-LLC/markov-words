@@ -2,13 +2,13 @@
   "name": "markov-words",
   "version": "1.0.0",
   "description": "Word generator based on Markov chains",
-  "homepage": "https://nai888.github.io/markov-words/",
+  "homepage": "https://susurrus-llc.github.io/markov-words/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nai888/markov-words"
+    "url": "https://github.com/Susurrus-LLC/markov-words"
   },
   "bugs": {
-    "url": "https://github.com/nai888/markov-words/issues"
+    "url": "https://github.com/Susurrus-LLC/markov-words/issues"
   },
   "author": "Ian A. Cook <ian@code.ianacook.com>",
   "license": "AGPL-3.0",

@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/markov-words/static/css/main.7444c9a1.chunk.css",
-    "main.js": "/markov-words/static/js/main.56ddd06b.chunk.js",
-    "main.js.map": "/markov-words/static/js/main.56ddd06b.chunk.js.map",
+    "main.js": "/markov-words/static/js/main.f9fd4a23.chunk.js",
+    "main.js.map": "/markov-words/static/js/main.f9fd4a23.chunk.js.map",
     "runtime-main.js": "/markov-words/static/js/runtime-main.771b8254.js",
     "runtime-main.js.map": "/markov-words/static/js/runtime-main.771b8254.js.map",
     "static/css/2.5944899b.chunk.css": "/markov-words/static/css/2.5944899b.chunk.css",
     "static/js/2.e114928a.chunk.js": "/markov-words/static/js/2.e114928a.chunk.js",
     "static/js/2.e114928a.chunk.js.map": "/markov-words/static/js/2.e114928a.chunk.js.map",
     "index.html": "/markov-words/index.html",
-    "precache-manifest.c9a1b2f206a40d0ddd27a3e2eb43b82a.js": "/markov-words/precache-manifest.c9a1b2f206a40d0ddd27a3e2eb43b82a.js",
+    "precache-manifest.63bec37d6a0c7be0219c1f5af4f8cc2f.js": "/markov-words/precache-manifest.63bec37d6a0c7be0219c1f5af4f8cc2f.js",
     "service-worker.js": "/markov-words/service-worker.js",
     "static/css/2.5944899b.chunk.css.map": "/markov-words/static/css/2.5944899b.chunk.css.map",
     "static/css/main.7444c9a1.chunk.css.map": "/markov-words/static/css/main.7444c9a1.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.5944899b.chunk.css",
     "static/js/2.e114928a.chunk.js",
     "static/css/main.7444c9a1.chunk.css",
-    "static/js/main.56ddd06b.chunk.js"
+    "static/js/main.f9fd4a23.chunk.js"
   ]
 }

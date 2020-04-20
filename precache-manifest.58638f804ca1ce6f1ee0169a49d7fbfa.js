@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2465273ad10df24c3b57ff2c54c20cce",
+    "revision": "f72e5df64a1c3f98f95a52f8165f02c6",
     "url": "/markov-words/index.html"
   },
   {

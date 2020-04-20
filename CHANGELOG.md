@@ -6,4 +6,8 @@ The format of this changelog is based on [Keep a Changelog](https://keepachangel
 
 ## [Unreleased](https://github.com/Susurrus-LLC/markov-words/compare/v1.0.0...HEAD)
 
+### Changed
+
+- Update HTML theme color to match main color.
+
 ## [v1.0.0](https://github.com/Susurrus-LLC/markov-words/compare/8b07abf3ee52b51fa65e85a459c8502c6c56d60b...v1.0.0) - 2020-04-20

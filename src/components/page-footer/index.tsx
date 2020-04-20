@@ -8,10 +8,21 @@ const Footer: React.FC = () => {
     const current = new Date().getFullYear()
     return current > start ? `${start}–${current}` : start.toString()
   }
+
+  const version = '1.0.0'
+
   return (
     <footer className={styles.footer}>
       <p className={styles.copyright}>
-        Built by{' '}
+        Version{' '}
+        <a
+          href='https://github.com/Susurrus-LLC/markov-words/blob/master/CHANGELOG.md'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          {version}
+        </a>
+        . Built by{' '}
         <a
           href='https://github.com/nai888'
           target='_blank'

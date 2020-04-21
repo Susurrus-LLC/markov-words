@@ -13,7 +13,7 @@ deploy:
   skip-cleanup: true
   github_token: "$github_token"
   local-dir: build
-  committer-from-gh: true
+  keep_history: true
   on:
     branch: master
 notifications:

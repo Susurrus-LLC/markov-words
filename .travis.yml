@@ -7,13 +7,12 @@ cache:
   - node_modules
 script:
 - yarn test
-- yarn build
+# - yarn build # skip this step until I can fix the authentication issue
 deploy:
   provider: pages
-  skip_cleanup: true
-  github_token: "$github_token"
+  token: $github_token
   local_dir: build
-  keep_history: true
+  edge: true #opt in dpl v2
   on:
     branch: master
 notifications:

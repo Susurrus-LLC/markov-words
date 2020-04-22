@@ -6,7 +6,7 @@ Thank you for taking the time to contribute to Markov Words! :+1::tada:
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by Markov Words' [code of conduct](https://github.com/Susurrus-LLC/markov-words/blob/master/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code of conduct.
+This project and everyone participating in it is governed by Markov Words' [code of conduct](https://github.com/Susurrus-LLC/markov-words/blob/master/.github/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code of conduct.
 
 ## How to Contribute
 
@@ -14,7 +14,7 @@ This project and everyone participating in it is governed by Markov Words' [code
 
 Before you submit an issue, please check to see if there are any existing issues addressing this problem. If there's an open issue, please add a comment to provide more context. If there's a closed issue, you may open a new issue, but please link to the original issue in the body of your new one. If there isn't a previous issue discussing this bug, please open a new issue.
 
-Always use the [issue template](https://github.com/Susurrus-LLC/markov-words/blob/master/.github/ISSUE_TEMPLATE.md) and provide all required information along with a clear and descriptive title and any other relevant details. If needed, include a screenshot or animate GIF to show the problem.
+Always use the [issue template](https://github.com/Susurrus-LLC/markov-words/blob/master/.github/ISSUE_TEMPLATE/bug_report.md) and provide all required information along with a clear and descriptive title and any other relevant details. If needed, include a screenshot or animate GIF to show the problem.
 
 ### Requesting Features or Enhancements
 
@@ -51,7 +51,7 @@ This will start a virtual server running Markov Words at [http://localhost:3000]
 
 #### Pull requests
 
-When creating a pull request, always use the [pull request template](https://github.com/Susurrus-LLC/markov-words/blob/master/.github/PULL_REQUEST_TEMPLATE.md) and provide all required information along with a clear and descriptive title and any other relevant details. Do not include issue numbers in the title; *do* link to related issues in the body of the pull request. If needed, include a screenshot or animate GIF to demonstrate your changes.
+When creating a pull request, always use the [pull request template](https://github.com/Susurrus-LLC/markov-words/blob/master/.github/PULL_REQUEST_TEMPLATE/pull_request_template.md) and provide all required information along with a clear and descriptive title and any other relevant details. Do not include issue numbers in the title; *do* link to related issues in the body of the pull request. If needed, include a screenshot or animate GIF to demonstrate your changes.
 
 ## Styles
 

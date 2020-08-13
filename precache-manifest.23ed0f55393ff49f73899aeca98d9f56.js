@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e9f490384fd03706b50ddff20faa1555",
+    "revision": "c02e5a73b6108b199917167b77890c0a",
     "url": "/markov-words/index.html"
   },
   {
-    "revision": "8bffcb7a071503c2755b",
+    "revision": "9457635ce5b0691aff14",
     "url": "/markov-words/static/css/2.e9b19f93.chunk.css"
   },
   {
-    "revision": "85be643b709086882efb",
+    "revision": "1e99035ae6018b510fbe",
     "url": "/markov-words/static/css/main.6eddb252.chunk.css"
   },
   {
-    "revision": "8bffcb7a071503c2755b",
-    "url": "/markov-words/static/js/2.e114928a.chunk.js"
+    "revision": "9457635ce5b0691aff14",
+    "url": "/markov-words/static/js/2.964cc08a.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/markov-words/static/js/2.e114928a.chunk.js.LICENSE.txt"
+    "url": "/markov-words/static/js/2.964cc08a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "85be643b709086882efb",
-    "url": "/markov-words/static/js/main.a378c696.chunk.js"
+    "revision": "1e99035ae6018b510fbe",
+    "url": "/markov-words/static/js/main.432b42ab.chunk.js"
   },
   {
-    "revision": "305f6f846f6dc16afc86",
-    "url": "/markov-words/static/js/runtime-main.771b8254.js"
+    "revision": "66074589f07e7620483b",
+    "url": "/markov-words/static/js/runtime-main.c736ad80.js"
   },
   {
     "revision": "085b1dd8427dbeff10bd55410915a3f6",

@@ -6,20 +6,20 @@
     "runtime-main.js": "/markov-words/static/js/runtime-main.c736ad80.js",
     "runtime-main.js.map": "/markov-words/static/js/runtime-main.c736ad80.js.map",
     "static/css/2.07688f52.chunk.css": "/markov-words/static/css/2.07688f52.chunk.css",
-    "static/js/2.afa14ad0.chunk.js": "/markov-words/static/js/2.afa14ad0.chunk.js",
-    "static/js/2.afa14ad0.chunk.js.map": "/markov-words/static/js/2.afa14ad0.chunk.js.map",
+    "static/js/2.1ebbc68c.chunk.js": "/markov-words/static/js/2.1ebbc68c.chunk.js",
+    "static/js/2.1ebbc68c.chunk.js.map": "/markov-words/static/js/2.1ebbc68c.chunk.js.map",
     "index.html": "/markov-words/index.html",
-    "precache-manifest.1ed59cc4db99432a838dc2b21ecae3eb.js": "/markov-words/precache-manifest.1ed59cc4db99432a838dc2b21ecae3eb.js",
+    "precache-manifest.a427bf7e0b3177f27f4176dd404e7239.js": "/markov-words/precache-manifest.a427bf7e0b3177f27f4176dd404e7239.js",
     "service-worker.js": "/markov-words/service-worker.js",
     "static/css/2.07688f52.chunk.css.map": "/markov-words/static/css/2.07688f52.chunk.css.map",
     "static/css/main.6eddb252.chunk.css.map": "/markov-words/static/css/main.6eddb252.chunk.css.map",
-    "static/js/2.afa14ad0.chunk.js.LICENSE.txt": "/markov-words/static/js/2.afa14ad0.chunk.js.LICENSE.txt",
+    "static/js/2.1ebbc68c.chunk.js.LICENSE.txt": "/markov-words/static/js/2.1ebbc68c.chunk.js.LICENSE.txt",
     "static/media/global.sass": "/markov-words/static/media/fa-solid-900.8e1ed89b.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.c736ad80.js",
     "static/css/2.07688f52.chunk.css",
-    "static/js/2.afa14ad0.chunk.js",
+    "static/js/2.1ebbc68c.chunk.js",
     "static/css/main.6eddb252.chunk.css",
     "static/js/main.432b42ab.chunk.js"
   ]

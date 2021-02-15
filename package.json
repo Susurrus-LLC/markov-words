@@ -36,7 +36,7 @@
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@types/jest": "26.0.19",
     "@types/node": "14.14.20",
-    "@types/react": "17.0.0",
+    "@types/react": "17.0.2",
     "@types/react-dom": "17.0.0",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",

@@ -60,14 +60,14 @@ const Form: React.FC = () => {
   }, [sample])
 
   // make a random choice, given options
-  const choose = (arr: string[]) => arr[Math.floor(arr.length * Math.random())]
+  const choose = (arr: string[]): string => arr[Math.floor(arr.length * Math.random())]
 
   const build = (): void => {
     // if the input has changed,
     if (!startersReady || !terminalsReady || !dictionaryReady) {
-      let newStart: string[] = []
-      let newTerm: Terminals = {}
-      let newDict: Dictionary = {}
+      const newStart: string[] = []
+      const newTerm: Terminals = {}
+      const newDict: Dictionary = {}
 
       // build the dictionary, terminals, and starters
       for (let i = 0; i < text.length; i++) {
@@ -83,7 +83,7 @@ const Form: React.FC = () => {
         // build the dictionary and stats
         for (let j = 0; j < word.length - 1; j++) {
           // add lookups for single letters
-          if (newDict.hasOwnProperty(word[j])) {
+          if (Object.prototype.hasOwnProperty.call(newDict, word[j])) {
             // if the letter is already in the dictionary, add its following letter
             newDict[word[j]].push(word[j + 1])
           } else {
@@ -93,7 +93,7 @@ const Form: React.FC = () => {
 
           // add lookups for paired letters after reaching the second letter
           if (j > 0) {
-            if (newDict.hasOwnProperty(word[j - 1] + word[j])) {
+            if (Object.prototype.hasOwnProperty.call(newDict, word[j - 1] + word[j])) {
               // if the letter pair is already in the dictionary, add its following letter
               newDict[word[j - 1] + word[j]].push(word[j + 1])
             } else {
@@ -117,17 +117,17 @@ const Form: React.FC = () => {
 
   const generate = (min: number): string => {
     // grab the last letter(s) of the word for lookup
-    const getLookup = (word: string[]) => {
+    const getLookup = (word: string[]): string => {
       return word.length < 2 ? word[word.length - 1] : word.slice(-2).join('')
     }
 
     // start with starter letters
     let letter = choose(starters)
     let next = letter.split('')
-    let word = next
+    const word = next
     let lookup = getLookup(word)
 
-    while (dictionary.hasOwnProperty(lookup)) {
+    while (Object.prototype.hasOwnProperty.call(dictionary, lookup)) {
       // choose the next letter and add it to the word
       next = dictionary[lookup]
       letter = choose(next)
@@ -135,7 +135,7 @@ const Form: React.FC = () => {
       lookup = getLookup(word)
 
       // if the word is long enough and the current letter is a terminal, end the loop
-      if (word.length >= min && terminals.hasOwnProperty(lookup)) {
+      if (word.length >= min && Object.prototype.hasOwnProperty.call(terminals, lookup)) {
         break
       }
     }
@@ -154,7 +154,7 @@ const Form: React.FC = () => {
       build()
     } else {
       // if the data is built, generate the output
-      let results = []
+      const results = []
 
       // if the minimum length is greater than the maximum, display an error
       if (min > max) {

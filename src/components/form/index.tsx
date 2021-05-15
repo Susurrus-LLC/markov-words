@@ -60,7 +60,8 @@ const Form: React.FC = () => {
   }, [sample])
 
   // make a random choice, given options
-  const choose = (arr: string[]): string => arr[Math.floor(arr.length * Math.random())]
+  const choose = (arr: string[]): string =>
+    arr[Math.floor(arr.length * Math.random())]
 
   const build = (): void => {
     // if the input has changed,
@@ -93,7 +94,12 @@ const Form: React.FC = () => {
 
           // add lookups for paired letters after reaching the second letter
           if (j > 0) {
-            if (Object.prototype.hasOwnProperty.call(newDict, word[j - 1] + word[j])) {
+            if (
+              Object.prototype.hasOwnProperty.call(
+                newDict,
+                word[j - 1] + word[j]
+              )
+            ) {
               // if the letter pair is already in the dictionary, add its following letter
               newDict[word[j - 1] + word[j]].push(word[j + 1])
             } else {
@@ -135,7 +141,10 @@ const Form: React.FC = () => {
       lookup = getLookup(word)
 
       // if the word is long enough and the current letter is a terminal, end the loop
-      if (word.length >= min && Object.prototype.hasOwnProperty.call(terminals, lookup)) {
+      if (
+        word.length >= min &&
+        Object.prototype.hasOwnProperty.call(terminals, lookup)
+      ) {
         break
       }
     }

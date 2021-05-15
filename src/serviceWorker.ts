@@ -36,12 +36,14 @@ export function register (config?: Config): void {
 
         // Add some additional logging to localhost, pointing developers to the
         // service worker/PWA documentation.
-        navigator.serviceWorker.ready.then(() => {
-          console.log(
-            'This web app is being served cache-first by a service ' +
-              'worker. To learn more, visit https://bit.ly/CRA-PWA'
-          )
-        }).catch(() => {})
+        navigator.serviceWorker.ready
+          .then(() => {
+            console.log(
+              'This web app is being served cache-first by a service ' +
+                'worker. To learn more, visit https://bit.ly/CRA-PWA'
+            )
+          })
+          .catch(() => {})
       } else {
         // Is not localhost. Just register service worker
         registerValidSW(swUrl, config)
@@ -102,14 +104,19 @@ function checkValidServiceWorker (swUrl: string, config?: Config): void {
       const contentType = response.headers.get('content-type')
       if (
         response.status === 404 ||
-        (contentType?.includes('javascript') === true)
+        contentType?.includes('javascript') === true
       ) {
         // No service worker found. Probably a different app. Reload the page.
-        navigator.serviceWorker.ready.then(registration => {
-          registration.unregister().then(() => {
-            window.location.reload()
-          }).catch(() => {})
-        }).catch(() => {})
+        navigator.serviceWorker.ready
+          .then(registration => {
+            registration
+              .unregister()
+              .then(() => {
+                window.location.reload()
+              })
+              .catch(() => {})
+          })
+          .catch(() => {})
       } else {
         // Service worker found. Proceed as normal.
         registerValidSW(swUrl, config)
@@ -124,8 +131,10 @@ function checkValidServiceWorker (swUrl: string, config?: Config): void {
 
 export function unregister (): void {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready.then(registration => {
-      registration.unregister().catch(() => {})
-    }).catch(() => {})
+    navigator.serviceWorker.ready
+      .then(registration => {
+        registration.unregister().catch(() => {})
+      })
+      .catch(() => {})
   }
 }

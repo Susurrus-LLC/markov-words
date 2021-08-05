@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@types/jest": "26.0.24",
     "@types/node": "16.4.12",
     "@types/react": "17.0.15",

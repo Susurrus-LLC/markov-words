@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Navigate
-        run: cd ${{ GITHUB_WORKSPACE }}
+        run: cd ${{ github.workspace }}
 
       - name: Test
         run: yarn test
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Navigate
-        run: cd ${{ GITHUB_WORKSPACE }}
+        run: cd ${{ github.workspace }}
 
       - name: Build and Deploy
         run: yarn deploy

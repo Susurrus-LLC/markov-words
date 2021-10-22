@@ -18,8 +18,11 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - name: Navigate
-        run: cd ${{ github.workspace }}
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install
+        run: yarn
 
       - name: Test
         run: yarn test
@@ -30,8 +33,11 @@ jobs:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
-      - name: Navigate
-        run: cd ${{ github.workspace }}
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install
+        run: yarn
 
       - name: Build and Deploy
         run: yarn deploy

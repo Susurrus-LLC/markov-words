@@ -7,19 +7,20 @@ jobs:
     name: Install
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+      - uses: actions/checkout@v2
+
       - name: Install
-        run: yarn
+      - run: yarn
 
   test:
     name: Test
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
       - name: Test
-        run: yarn test
+      - run: cd ${{ github.repository }}
+      - run: yarn test
 
   deploy:
     name: Build and Deploy
@@ -27,8 +28,6 @@ jobs:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
       - name: Build and Deploy
-        run: yarn deploy
+      - run: cd ${{ github.repository }}
+      - run: yarn deploy

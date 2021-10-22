@@ -1,5 +1,6 @@
 # Markov Words
 
+[![Build](https://github.com/Susurrus-LLC/markov-words/actions/workflows/build.yml/badge.svg)](./actions)
 [![TypeScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![Release Version](https://img.shields.io/github/release/Susurrus-LLC/markov-words.svg)](https://github.com/Susurrus-LLC/markov-words/releases)
 [![License](https://img.shields.io/github/license/Susurrus-LLC/markov-words.svg)](https://github.com/Susurrus-LLC/markov-words/blob/master/LICENSE)

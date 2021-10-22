@@ -1,12 +1,6 @@
 name: Build CI
 
-on:
-  push:
-    branches:
-    - master
-  pull_request:
-    branches:
-    - master
+on: [push, pull_request]
 
 jobs:
   install:
@@ -30,6 +24,7 @@ jobs:
   deploy:
     name: Build and Deploy
     needs: test
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - name: Build and Deploy

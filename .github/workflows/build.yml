@@ -18,9 +18,11 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
+      - name: Navigate
+        run: cd ${{ github.repository }}
+
       - name: Test
-      - run: cd ${{ github.repository }}
-      - run: yarn test
+        run: yarn test
 
   deploy:
     name: Build and Deploy
@@ -28,6 +30,8 @@ jobs:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
+      - name: Navigate
+        run: cd ${{ github.repository }}
+
       - name: Build and Deploy
-      - run: cd ${{ github.repository }}
-      - run: yarn deploy
+        run: yarn deploy

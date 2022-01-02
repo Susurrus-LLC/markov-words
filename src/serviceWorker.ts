@@ -43,7 +43,9 @@ export function register (config?: Config): void {
                 'worker. To learn more, visit https://bit.ly/CRA-PWA'
             )
           })
-          .catch(() => {})
+          .catch(() => {
+            console.log('Tried to load the service worker but failed.')
+          })
       } else {
         // Is not localhost. Just register service worker
         registerValidSW(swUrl, config)
@@ -114,9 +116,13 @@ function checkValidServiceWorker (swUrl: string, config?: Config): void {
               .then(() => {
                 window.location.reload()
               })
-              .catch(() => {})
+              .catch(() => {
+                console.log('Tried to load service worker but failed.')
+              })
           })
-          .catch(() => {})
+          .catch(() => {
+            console.log('Tried to load service worker but failed.')
+          })
       } else {
         // Service worker found. Proceed as normal.
         registerValidSW(swUrl, config)
@@ -133,8 +139,12 @@ export function unregister (): void {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
       .then(registration => {
-        registration.unregister().catch(() => {})
+        registration.unregister().catch(() => {
+          console.log('Tried to unregister service worker but failed.')
+        })
       })
-      .catch(() => {})
+      .catch(() => {
+        console.log('Tried to unregister service worker but failed.')
+      })
   }
 }

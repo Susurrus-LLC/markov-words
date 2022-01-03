@@ -40,4 +40,7 @@ jobs:
         run: yarn
 
       - name: Build and Deploy
-        run: yarn deploy
+        run: |
+          git config user.email "6866411+nai888@users.noreply.github.com"
+          git config user.name "Ian A. Cook"
+          yarn deploy

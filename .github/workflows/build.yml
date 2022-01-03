@@ -46,3 +46,5 @@ jobs:
           git remote rm origin
           git remote add origin 'git@github.com:Susurrus-LLC/markov-words.git'
           yarn deploy
+        env:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,24 +1,28 @@
 {
   "files": {
-    "main.css": "/markov-words/static/css/main.7b836a86.chunk.css",
-    "main.js": "/markov-words/static/js/main.2f9b98b3.chunk.js",
-    "main.js.map": "/markov-words/static/js/main.2f9b98b3.chunk.js.map",
-    "runtime-main.js": "/markov-words/static/js/runtime-main.b9cbc69b.js",
-    "runtime-main.js.map": "/markov-words/static/js/runtime-main.b9cbc69b.js.map",
-    "static/css/2.ea7170d9.chunk.css": "/markov-words/static/css/2.ea7170d9.chunk.css",
-    "static/js/2.c33ff00b.chunk.js": "/markov-words/static/js/2.c33ff00b.chunk.js",
-    "static/js/2.c33ff00b.chunk.js.map": "/markov-words/static/js/2.c33ff00b.chunk.js.map",
+    "main.css": "/markov-words/static/css/main.29f1904f.css",
+    "main.js": "/markov-words/static/js/main.585ef9a2.js",
+    "static/media/fa-solid-900.svg": "/markov-words/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
+    "static/media/fa-brands-400.svg": "/markov-words/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
+    "static/media/fa-solid-900.eot": "/markov-words/static/media/fa-solid-900.9bbb245e67a133f6e486.eot",
+    "static/media/fa-solid-900.ttf": "/markov-words/static/media/fa-solid-900.be9ee23c0c6390141475.ttf",
+    "static/media/fa-regular-400.svg": "/markov-words/static/media/fa-regular-400.4689f52cc96215721344.svg",
+    "static/media/fa-brands-400.eot": "/markov-words/static/media/fa-brands-400.23f19bb08961f37aaf69.eot",
+    "static/media/fa-brands-400.ttf": "/markov-words/static/media/fa-brands-400.527940b104eb2ea366c8.ttf",
+    "static/media/fa-solid-900.woff": "/markov-words/static/media/fa-solid-900.eeccf4f66002c6f2ba24.woff",
+    "static/media/fa-brands-400.woff": "/markov-words/static/media/fa-brands-400.2285773e6b4b172f07d9.woff",
+    "static/media/fa-solid-900.woff2": "/markov-words/static/media/fa-solid-900.1551f4f60c37af51121f.woff2",
+    "static/media/fa-brands-400.woff2": "/markov-words/static/media/fa-brands-400.d878b0a6a1144760244f.woff2",
+    "static/media/fa-regular-400.eot": "/markov-words/static/media/fa-regular-400.77206a6bb316fa0aded5.eot",
+    "static/media/fa-regular-400.ttf": "/markov-words/static/media/fa-regular-400.491974d108fe4002b2aa.ttf",
+    "static/media/fa-regular-400.woff": "/markov-words/static/media/fa-regular-400.bb58e57c48a3e911f15f.woff",
+    "static/media/fa-regular-400.woff2": "/markov-words/static/media/fa-regular-400.7a3337626410ca2f4071.woff2",
     "index.html": "/markov-words/index.html",
-    "static/css/2.ea7170d9.chunk.css.map": "/markov-words/static/css/2.ea7170d9.chunk.css.map",
-    "static/css/main.7b836a86.chunk.css.map": "/markov-words/static/css/main.7b836a86.chunk.css.map",
-    "static/js/2.c33ff00b.chunk.js.LICENSE.txt": "/markov-words/static/js/2.c33ff00b.chunk.js.LICENSE.txt",
-    "static/media/global.sass": "/markov-words/static/media/fa-solid-900.eeccf4f6.woff"
+    "main.29f1904f.css.map": "/markov-words/static/css/main.29f1904f.css.map",
+    "main.585ef9a2.js.map": "/markov-words/static/js/main.585ef9a2.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.b9cbc69b.js",
-    "static/css/2.ea7170d9.chunk.css",
-    "static/js/2.c33ff00b.chunk.js",
-    "static/css/main.7b836a86.chunk.css",
-    "static/js/main.2f9b98b3.chunk.js"
+    "static/css/main.29f1904f.css",
+    "static/js/main.585ef9a2.js"
   ]
 }

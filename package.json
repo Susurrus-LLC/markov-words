@@ -58,7 +58,7 @@
     "eslint-plugin-standard": "^5.0.0",
     "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
-    "lint-staged": "^12.4.3",
+    "lint-staged": "^13.0.0",
     "modularscale-sass": "^3.0.10",
     "prettier-standard": "^16.4.1"
   },

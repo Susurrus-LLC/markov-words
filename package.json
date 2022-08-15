@@ -35,7 +35,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.2",
     "@types/jest": "28.1.6",
-    "@types/node": "18.7.2",
+    "@types/node": "18.7.4",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "node-sass": "^7.0.1",

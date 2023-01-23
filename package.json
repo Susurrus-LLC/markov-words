@@ -56,7 +56,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-standard": "^5.0.0",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "modularscale-sass": "^3.0.10",
